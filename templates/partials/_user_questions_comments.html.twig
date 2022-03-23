@@ -1,0 +1,16 @@
+<div class="block mb-20">
+	<h3 class="pb-30">{{ questionsTitle }}</h3>
+	<ul>
+		{% for question in user.questions %}
+			<li>{{ question.title }}</li>
+		{% endfor %}
+	</ul>
+</div>
+<div class="block">
+	<h3  class="pb-30">{{ commentsTitle }}</h3>
+	<ul>
+		{% for comment in user.comments %}
+			<li>{{ comment.content | slice(0, 50) }}</li>
+		{% endfor %}
+	</ul>
+</div>

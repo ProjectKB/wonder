@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ user.fullname }}{% endblock %}
+
+{% block body %}
+
+    <div class="block mb-20">
+        <h2 class="pb-30">{{ user.fullname }}</h2>
+        <div class="d-flex flex-row-nowrap">
+            <img src="{{ user.picture }}" class="mr-10 profile-picture">
+            <ul>
+                <li class="mb-10">
+                    <strong class="mr-10">Prénom:</strong>{{ user.firstname }}
+                </li>
+                <li class="mb-10">
+                    <strong class="mr-10">Nom:</strong>{{ user.lastname }}
+                </li>
+                <li class="mb-10">
+                    <strong class="mr-10">Email:</strong>{{ user.email }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    {% include "partials/_user_questions_comments.html.twig" with { user: user, questionsTitle: 'Questions', commentsTitle:'Réponses', } %}
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon profil
+{% endblock %}
+
+{% block body %}
+	<div class="block mb-20">
+		<h2 class="pb-30">Page de profil</h2>
+		{{ form_start(form) }}
+		{{ form_rest(form) }}
+		<button class="btn btn-primary mr-10">Mettre à jour</button>
+		{{ form_end(form) }}
+	</div>
+	{% include "partials/_user_questions_comments.html.twig" with { user: app.user, questionsTitle: 'Mes questions', commentsTitle: 'Mes réponses', } %}
+
+{% endblock %}
