@@ -5,7 +5,7 @@
     </a>
     <div class="header-search p-10 flex-fill">
       <i class="fas fa-search"></i>
-      <input type="text">
+      <searchbar id="headerSearchbar"></searchbar>
     </div>
     {%- if is_granted('ROLE_USER') -%}
       <div class="d-flex flow-row-nowrap justify-content-center hide-xs">
