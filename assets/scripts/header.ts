@@ -1,3 +1,5 @@
+import './components/HeaderSearchBar';
+
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu-xs');
 const appContent = document.querySelector('.app-content');

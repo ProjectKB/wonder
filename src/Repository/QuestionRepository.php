@@ -73,12 +73,12 @@ class QuestionRepository extends ServiceEntityRepository
             ->getOneOrNullResult();
     }
 
-    public function getQuestionsTitlesCloseTo(?string $title): array
+    public function findBySearch(?string $title): array
     {
         return $this->createQueryBuilder('q')
             ->andWhere('q.title LIKE :title')
             ->setParameter('title', '%'.$title.'%')
-            ->select('q.title')
+            ->select(['q.title', 'q.id'])
             ->getQuery()
             ->getResult();
     }

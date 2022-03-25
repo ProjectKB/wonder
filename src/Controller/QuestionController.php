@@ -136,15 +136,17 @@ class QuestionController extends AbstractController
     return $referer ? $this->redirect($referer) : $this->redirectToRoute('home');
   }
 
-    #[Route('/searchQuestions', name: 'questions')]
-    public function getQuestions(Request $request, QuestionRepository $questionRepo): Response
-    {
-        if (empty(json_decode($request->getContent()))) {
-          return $this->json([], 200);
-        }
+  #[Route('/search/questions', name: 'questions', priority: 1)]
+  public function getQuestions(Request $request, QuestionRepository $questionRepo): Response
+  {
+    $search = json_decode($request->getContent());
 
-        $questions = array_column($questionRepo->getQuestionsTitlesCloseTo(json_decode($request->getContent())), 'title');
-
-        return $this->json($questions, 200);
+    if (empty($search)) {
+      return $this->json([], 200);
     }
+
+    $questions = $questionRepo->findBySearch($search);
+    
+    return $this->json($questions, 200);
+  }
 }

@@ -20,6 +20,24 @@ header {
   background-color: var(--gray-light);
 }
 
+.header-search-result {
+  position: absolute;
+  min-width: 350px;
+  padding: 10px;
+}
+
+.header-search-result ul {
+  line-height: var(--line-height-hight);
+}
+
+.header-search-result ul li {
+  cursor: pointer;
+}
+
+.header-search-result ul li:hover {
+  background-color: var(--gray-light);
+}
+
 .header-logo {
   width: 150px;
 }
