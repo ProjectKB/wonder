@@ -37,7 +37,7 @@ const HeaderSearchbar = () => {
     </div> : null
   );
 
-  function useOutsideAlerter(ref) {
+  const useOutsideAlerter = (ref) => {
     useEffect(() => {
       // Alert if clicked on outside of element
       function handleClickOutside(event) {
