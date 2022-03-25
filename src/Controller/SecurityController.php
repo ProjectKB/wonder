@@ -125,7 +125,7 @@ class SecurityController extends AbstractController
     }
 
     #[Route('/reset-password-request', name: 'reset-password-request')]
-    public function resetPasswordRequest(RateLimiterFactory $passwordRecoveryLimiter,  MailerInterface $mailer, Request $request, UserRepository $userRepository, ResetPasswordRepository $resetPasswordRepository, EntityManagerInterface $em)
+    public function resetPasswordRequest(RateLimiterFactory $passwordRecoveryLimiter, MailerInterface $mailer, Request $request, UserRepository $userRepository, ResetPasswordRepository $resetPasswordRepository, EntityManagerInterface $em)
     {
         $limiter = $passwordRecoveryLimiter->create($request->getClientIp());
         if (false === $limiter->consume(1)->isAccepted()) {
