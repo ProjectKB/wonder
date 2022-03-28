@@ -35,6 +35,7 @@ class SecurityController extends AbstractController
         $user = new User();
         $userForm = $this->createForm(UserType::class, $user);
         $userForm->handleRequest($request);
+
         if ($userForm->isSubmitted() && $userForm->isValid()) {
             $picture = $userForm->get('pictureFile')->getData();
             $user->setPicture($uploader->uploadProfileImage($picture));
@@ -53,6 +54,8 @@ class SecurityController extends AbstractController
             $mailer->send($email);
             return $userAuthenticator->authenticateUser($user, $loginForm, $request);
         }
+
+
         return $this->render('security/signup.html.twig', ['form' => $userForm->createView()]);
     }
 
@@ -65,6 +68,7 @@ class SecurityController extends AbstractController
         }
         $error = $authenticationUtils->getLastAuthenticationError();
         $lastUsername = $authenticationUtils->getLastUsername();
+
         return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
     }
 
