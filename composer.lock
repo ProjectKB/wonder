@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24285ad1053427a34f54cb011746464d",
+    "content-hash": "4ff95b85af6d137959f56ffda9682137",
     "packages": [
         {
             "name": "api-platform/core",
@@ -6831,6 +6831,78 @@
                 }
             ],
             "time": "2022-02-21T17:15:17+00:00"
+        },
+        {
+            "name": "symfony/semaphore",
+            "version": "v6.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/semaphore.git",
+                "reference": "d1fcf11e6774d60ff670d949c1914ea9b29ba395"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/semaphore/zipball/d1fcf11e6774d60ff670d949c1914ea9b29ba395",
+                "reference": "d1fcf11e6774d60ff670d949c1914ea9b29ba395",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+                "psr/log": "^1|^2|^3"
+            },
+            "require-dev": {
+                "predis/predis": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Semaphore\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grégoire Pineau",
+                    "email": "lyrixx@lyrixx.info"
+                },
+                {
+                    "name": "Jérémy Derussé",
+                    "email": "jeremy@derusse.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Semaphore Component",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "semaphore"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/semaphore/tree/v6.0.5"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-02-04T19:03:38+00:00"
         },
         {
             "name": "symfony/serializer",

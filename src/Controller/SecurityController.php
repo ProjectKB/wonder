@@ -55,7 +55,6 @@ class SecurityController extends AbstractController
             return $userAuthenticator->authenticateUser($user, $loginForm, $request);
         }
 
-
         return $this->render('security/signup.html.twig', ['form' => $userForm->createView()]);
     }
 

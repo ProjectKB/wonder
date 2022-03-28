@@ -530,6 +530,9 @@
     "symfony/security-http": {
         "version": "v6.0.5"
     },
+    "symfony/semaphore": {
+        "version": "v6.0.5"
+    },
     "symfony/serializer": {
         "version": "v6.0.6"
     },
