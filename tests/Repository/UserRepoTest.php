@@ -22,12 +22,11 @@ class UserRepoTest extends KernelTestCase
             ->getManager();
     }
 
-    public function testSomething()
+    public function testUserFixture()
     {
         $user = $this->entityManager
             ->getRepository(User::class)
-            ->find(1)
-        ;
+            ->find(1);
 
         assertEquals('Firstname', $user->getFirstname());
     }
