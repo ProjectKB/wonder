@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Tests;
+namespace App\Tests\Repository;
 
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
-
 use function PHPUnit\Framework\assertEquals;
 
 class UserRepoTest extends KernelTestCase

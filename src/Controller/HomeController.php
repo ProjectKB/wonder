@@ -9,12 +9,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
-  #[Route('/', name: 'home')]
-  public function index(QuestionRepository $questionRepository): Response
-  {
-    $questions = $questionRepository->getLastQuestionsWithAuthors();
-    return $this->render('home/index.html.twig', [
-      'questions' => $questions
-    ]);
-  }
+    #[Route('/', name: 'home')]
+    public function index(QuestionRepository $questionRepository): Response
+    {
+        $questions = $questionRepository->getLastQuestionsWithAuthors();
+        return $this->render('home/index.html.twig', [
+            'questions' => $questions
+        ]);
+    }
 }

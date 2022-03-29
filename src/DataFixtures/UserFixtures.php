@@ -8,7 +8,7 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 
 class UserFixtures extends Fixture
 {
-    public function load(ObjectManager $om): void
+    public function load(ObjectManager $manager): void
     {
         $user = (new User())
             ->setEmail("test@gmail.com")
@@ -16,8 +16,8 @@ class UserFixtures extends Fixture
             ->setFirstname("Firstname")
             ->setLastname("Lastname")
             ->setPicture("https://randomuser.me/api/portraits/men/85.jpg");
-        
-        $om->persist($user);
-        $om->flush();
+
+        $manager->persist($user);
+        $manager->flush();
     }
 }

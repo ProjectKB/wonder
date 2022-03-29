@@ -28,3 +28,4 @@ services:
         arguments:
             $profileFolder: '%profile.folder%'
             $profileFolderPublic: '%profile.folder.public_path%'
+#    App\Service\Factory\UserFactory

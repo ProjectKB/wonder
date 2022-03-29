@@ -1,11 +1,11 @@
 SHELL := /bin/bash
-FILE = 
+TEST =
 
 tests:
 	@symfony php bin/phpunit
 
 test:
-	@symfony php bin/phpunit ./tests/${FILE}Test.php
+	@symfony php bin/phpunit ./tests/${TEST}Test.php
 
 setDbTest:
 	@symfony console doctrine:database:drop --force --env=test || true
